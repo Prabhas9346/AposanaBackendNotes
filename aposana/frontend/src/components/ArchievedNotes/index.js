@@ -97,7 +97,7 @@ const ArchievedNotes = () => {
 
         try {
             const response = await fetch(
-                'http://localhost:8000/notes/',
+                'https://aposanabackendnotes.onrender.com/notes/',
                 options
             );
             if (!response.ok) {

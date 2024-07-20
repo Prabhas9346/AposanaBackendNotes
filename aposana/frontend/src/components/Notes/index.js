@@ -27,8 +27,8 @@ const Notes = () => {
         };
 
         const url = label
-            ? `http://localhost:8000/notes?label=${label}`
-            : 'http://localhost:8000/notes/';
+            ? `https://aposanabackendnotes.onrender.com/notes?label=${label}`
+            : 'https://aposanabackendnotes.onrender.com/notes/';
 
         try {
             const response = await fetch(url, options);
@@ -100,7 +100,7 @@ const Notes = () => {
 
         try {
             const response = await fetch(
-                'http://localhost:8000/notes/',
+                'https://aposanabackendnotes.onrender.com/notes/',
                 options
             );
             if (!response.ok) {

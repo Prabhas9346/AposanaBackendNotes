@@ -89,7 +89,7 @@ class SignUp extends Component {
 
         try {
             const response = await fetch(
-                'http://localhost:8000/SignUp/',
+                'https://aposanabackendnotes.onrender.com/SignUp/',
                 options
             );
 

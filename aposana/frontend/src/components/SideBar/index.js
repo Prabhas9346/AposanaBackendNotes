@@ -33,7 +33,7 @@ class SideBar extends Component {
         };
         try {
             const response = await fetch(
-                'http://localhost:8000/labels/',
+                'https://aposanabackendnotes.onrender.com/labels/',
                 options
             );
 

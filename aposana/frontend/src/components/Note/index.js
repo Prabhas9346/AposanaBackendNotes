@@ -108,7 +108,7 @@ class Note extends Component {
 
         try {
             const response = await fetch(
-                `http://localhost:8000/notes/${id}`,
+                `https://aposanabackendnotes.onrender.com/notes/${id}`,
                 options
             );
 
@@ -147,7 +147,7 @@ class Note extends Component {
                 };
 
                 const response = await fetch(
-                    `http://localhost:8000/labels/`,
+                    `https://aposanabackendnotes.onrender.com/labels/`,
                     options
                 );
 
@@ -171,7 +171,7 @@ class Note extends Component {
                 };
 
                 const linkResponse = await fetch(
-                    `http://localhost:8000/labelnotes/`,
+                    `https://aposanabackendnotes.onrender.com/labelnotes/`,
                     options
                 );
 

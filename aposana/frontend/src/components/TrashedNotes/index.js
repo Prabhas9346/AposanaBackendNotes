@@ -19,7 +19,7 @@ const TrashedNotes = () => {
             },
         };
 
-        const url = 'http://localhost:8000/notes/Trashed';
+        const url = 'https://aposanabackendnotes.onrender.com/notes/Trashed';
 
         try {
             const response = await fetch(url, options);

@@ -29,7 +29,7 @@ class TrashedNote extends Component {
 
         try {
             const response = await fetch(
-                `http://localhost:8000/notes/trash/${id}`,
+                `https://aposanabackendnotes.onrender.com/notes/trash/${id}`,
                 options
             );
 
@@ -61,7 +61,7 @@ class TrashedNote extends Component {
 
         try {
             const response = await fetch(
-                `http://localhost:8000/notes/${id}`,
+                `https://aposanabackendnotes.onrender.com/notes/${id}`,
                 options
             );
 

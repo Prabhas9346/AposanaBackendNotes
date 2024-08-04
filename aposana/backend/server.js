@@ -447,3 +447,30 @@ app.delete('/notes/:id', authenticateToken, async (request, response) => {
         response.status(400).send('User not found');
     }
 });
+app.delete('/labels/:id', authenticateToken, async (request, response) => {
+    const { id } = request.params;
+
+    const { username } = request;
+
+    // Retrieve the user ID based on the username
+    const userQuery = `SELECT id FROM users WHERE username = '${username}'`;
+    const user = await db.get(userQuery);
+
+    if (user) {
+        const userId = user.id;
+
+        // Ensure the note belongs to the user
+        const noteQuery = `SELECT userId FROM notes WHERE id = ${id}`;
+        const note = await db.get(noteQuery);
+
+        const updateNoteQuery = `
+                DELETE FROM labels
+                WHERE 
+                    id = ${id}`;
+
+        await db.run(updateNoteQuery);
+        response.send('Note deleted successfully');
+    } else {
+        response.status(400).send('User not found');
+    }
+});
